@@ -86,7 +86,6 @@ module.exports = {
             .waitForElementVisible('div[id=content]', 15000, 'Nearly there!')
             .useXpath()
             .click('.//a[contains(.,"kcqa1b@gmail.com")]')
-
             //Verify you advanced to page
             .useCss()
             .assert.elementPresent ('div[class*=login-auth-choice-view]', 'On options page')

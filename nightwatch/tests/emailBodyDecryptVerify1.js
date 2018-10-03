@@ -2,13 +2,12 @@ module.exports = {
 
 	"Email Body Decrypt Verification" : function (browser)
 	{
-        var emailSubject = 'virtru test email 1018-2';
-        var user2Login = 'kcqa1b@gmail.com';
-        var user2Pass = '';
-	var emailBody = 'This is the email body for an automated test.';
-	
+        var globals = browser.globals;
+        var emailSubject = 'virtru test email 1018-2';       
+        var emailBody = 'This is the email body for an automated test.';
 
-	function login() {
+
+		function login() {
             browser
             .useCss()
             .url('http://mail.google.com')
@@ -17,7 +16,7 @@ module.exports = {
             .waitForElementVisible('#headingText', 5000)
             .assert.containsText('#headingText', 'Sign in', 'See Sign in')
             .pause(1000)
-            .setValue ('#identifierId', user2Login)
+            .setValue ('#identifierId', globals.gmail.values.user2Login)
             .click ('#identifierNext')
             .pause(500)
 
@@ -25,7 +24,7 @@ module.exports = {
             .waitForElementVisible('#headingText', 5000)
             .assert.containsText ('#headingText', 'Welcome', 'See Welcome')
             .pause(5000)
-            .setValue ('input[type=password]', user2Pass)
+            .setValue ('input[type=password]', globals.gmail.values.user2Pass)
             .click ('#passwordNext')
             .pause(5000)
             ;

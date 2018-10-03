@@ -33,15 +33,15 @@
       },
 
       "desiredCapabilities": {
-        "browserName": "firefox",
+        "browserName": "chrome",
         "javascriptEnabled": true,
         "acceptSslCerts": true
       }
     },
     
-    "chrome" : {
+    "firefox" : {
       "desiredCapabilities": {
-        "browserName": "chrome",
+        "browserName": "firefox",
         "javascriptEnabled": true,
         "acceptSslCerts": true
       }

@@ -5,7 +5,7 @@ module.exports = {
         var emailSubject = 'virtru test email 1018-2';
         var user2Login = 'kcqa1b@gmail.com';
         var user2Pass = '';
-	    var emailBody = 'This is the email body for an automated test.';
+	var emailBody = 'This is the email body for an automated test.';
 	
 
 	function login() {

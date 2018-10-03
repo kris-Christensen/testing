@@ -1,5 +1,13 @@
+/* reporter */
+var HtmlReporter = require('nightwatch-html-reporter');
+var reporter = new HtmlReporter({
+openBrowser: false,
+reportsDirectory: __dirname + '/reports/'
+});
+
+/* variables */
 module.exports = {
-    
+    reporter: reporter.fn,  
     gmail:{
        values:{
         user1Login: 'kcqa1a@gmail.com',
